@@ -15,11 +15,7 @@ export default function NavBar() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setSidebarVisible(false);
-      } else {
-        setSidebarVisible(true);
-      }
+      setSidebarVisible(window.innerWidth < 768);
     };
 
     handleResize();
@@ -138,7 +134,7 @@ export default function NavBar() {
         </div>
       </Navbar>
 
-      {isSidebarVisible && (
+      {!isSidebarVisible && (
         <aside
           className="fixed top-0 left-0 z-40 w-64 h-screen pt-16 transition-transform border-r border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700 transform-none"
           aria-label="Sidenav"
