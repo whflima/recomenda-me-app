@@ -13,10 +13,10 @@ import {
 
 export function SideBar() {
   return (
-    <Sidebar aria-label="Sidebar with logo branding example">
-      <Sidebar.Logo href="#" img="./react.svg" imgAlt="Flowbite logo">
-        Flowbite
-      </Sidebar.Logo>
+    <Sidebar
+      aria-label="Sidebar with logo branding example"
+      className="overflow-y-auto py-5 px-3 h-full dark:bg-gray-800"
+    >
       <Sidebar.Items>
         <Sidebar.ItemGroup>
           <Sidebar.Item href="#" icon={HiChartPie}>
