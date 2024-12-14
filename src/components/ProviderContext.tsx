@@ -12,19 +12,11 @@ const Provider = (props: React.PropsWithChildren<{}>) => {
     localStorage.getItem(LocalStorageItems.THEME) || Modes.SYSTEM
   );
 
-  console.log(getTheme());
-
   return (
     <ProviderContext.Provider value={{ theme, setTheme }}>
       {props.children}
     </ProviderContext.Provider>
   );
-};
-
-const getTheme = () => {
-  return localStorage.getItem(LocalStorageItems.THEME)
-    ? localStorage.getItem(LocalStorageItems.THEME)
-    : Modes.SYSTEM;
 };
 
 export default Provider;

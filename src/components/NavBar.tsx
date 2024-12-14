@@ -1,8 +1,11 @@
-import { Avatar, Button, Dropdown, Navbar } from 'flowbite-react';
-import { useContext, useEffect, useState } from 'react';
+import { Navbar, Button, Dropdown, Avatar } from 'flowbite-react';
+import { useState, useContext, useEffect } from 'react';
+import { FaMoon } from 'react-icons/fa';
+import { MdWbSunny } from 'react-icons/md';
+import { RiNotification2Fill } from 'react-icons/ri';
+import { Modes } from '../constant';
 import darkModeSetup from '../utils/darkModeSetup';
 import { ProviderContext } from './ProviderContext';
-import { Modes } from '../constant';
 import { SideBar } from './SideBar';
 
 export default function NavBar() {
@@ -41,9 +44,9 @@ export default function NavBar() {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               ></path>
             </svg>
             <svg
@@ -54,9 +57,9 @@ export default function NavBar() {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               ></path>
             </svg>
             <span className="sr-only">Toggle sidebar</span>
@@ -78,15 +81,11 @@ export default function NavBar() {
             className="p-2 mr-1 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
           >
             <span className="sr-only">View notifications</span>
-            <svg
+            <RiNotification2Fill
+              className="w-5 h-5"
               aria-hidden="true"
-              className="w-6 h-6"
               fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
-            </svg>
+            />
           </Button>
 
           <button
@@ -99,9 +98,17 @@ export default function NavBar() {
             className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
           >
             {theme === Modes.DARK ? (
-              <img src="/moon.svg" className="w-5 h-5" alt="Moon Icon" />
+              <FaMoon
+                className="w-5 h-5"
+                aria-hidden="true"
+                fill="currentColor"
+              />
             ) : (
-              <img src="/sun.svg" className="w-5 h-5" alt="Sun Icon" />
+              <MdWbSunny
+                className="w-5 h-5"
+                aria-hidden="true"
+                fill="currentColor"
+              />
             )}
           </button>
 
