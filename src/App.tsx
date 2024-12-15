@@ -4,7 +4,8 @@ import './App.css';
 import { LocalStorageItems, Modes } from './constant';
 import { ProviderContext } from './components/ProviderContext';
 import HomePage from './pages/HomePage';
-import NavBar from './components/NavBar';
+import { Layout } from './components/Layout';
+import ProfilePage from './pages/ProfilePage';
 
 export default function App() {
   const [theme, setTheme] = useState(
@@ -13,16 +14,14 @@ export default function App() {
 
   return (
     <ProviderContext.Provider value={{ theme, setTheme }}>
-      <div className="antialiased bg-gray-50 dark:bg-gray-900">
-        <NavBar />
-        <main className="p-4 md:ml-64 h-auto pt-20">
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-            </Routes>
-          </BrowserRouter>
-        </main>
-      </div>
+      <Layout>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/profile" element={<ProfilePage />} />
+          </Routes>
+        </BrowserRouter>
+      </Layout>
     </ProviderContext.Provider>
   );
 }

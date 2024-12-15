@@ -1,47 +1,37 @@
 'use client';
 
-import { Sidebar } from 'flowbite-react';
-import {
-  HiArrowSmRight,
-  HiChartPie,
-  HiInbox,
-  HiShoppingBag,
-  HiTable,
-  HiUser,
-  HiViewBoards,
-} from 'react-icons/hi';
+import { Sidebar, SidebarItems } from 'flowbite-react';
+import { HiChartPie } from 'react-icons/hi';
 
-export function SideBar() {
+export function SideBar({ isSidebarVisible }: ISideBarProps) {
+  const isSmall =
+    window.innerWidth < 1024
+      ? 'fixed top-0 left-0 z-40 w-64 h-screen pt-16 transition-transform border-r border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700 transform-none'
+      : 'top-0 left-0 z-40 w-64 h-screen transition-transform border-r border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700 transform-none';
+
   return (
-    <Sidebar
-      aria-label="Sidebar with logo branding example"
-      className="overflow-y-auto py-5 px-3 h-full dark:bg-gray-800"
+    <aside
+      hidden={isSidebarVisible}
+      className={isSmall}
+      id="drawer-navigation"
+      aria-modal="true"
+      role="dialog"
     >
-      <Sidebar.Items>
-        <Sidebar.ItemGroup>
-          <Sidebar.Item href="#" icon={HiChartPie}>
-            Dashboard
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiViewBoards}>
-            Kanban
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiInbox}>
-            Inbox
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiUser}>
-            Users
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiShoppingBag}>
-            Products
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiArrowSmRight}>
-            Sign In
-          </Sidebar.Item>
-          <Sidebar.Item href="#" icon={HiTable}>
-            Sign Up
-          </Sidebar.Item>
-        </Sidebar.ItemGroup>
-      </Sidebar.Items>
-    </Sidebar>
+      <Sidebar
+        aria-label="Sidebar with logo branding example"
+        className="relative flex flex-col flex-1 min-h-0 pt-0 bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+      >
+        <SidebarItems className="pb-2 space-y-2">
+          <Sidebar.ItemGroup>
+            <Sidebar.Item href="/" icon={HiChartPie}>
+              Dashboard
+            </Sidebar.Item>
+            <Sidebar.Item href="/profile" icon={HiChartPie}>
+              Profile
+            </Sidebar.Item>
+          </Sidebar.ItemGroup>
+        </SidebarItems>
+      </Sidebar>
+    </aside>
   );
 }
