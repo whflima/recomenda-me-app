@@ -1,50 +1,70 @@
-# React + TypeScript + Vite
+<h1 align="center">Welcome to Recomenda me App 👋</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A responsive React TypeScript application that will recommend movies to users based on user similarities. The app will feature user sign-up, login, logout, creating, adding, and deleting movies, viewing statistics and recommendations, changing the app language, and toggling between light and dark themes, all designed to deliver a personalized and user-friendly experience across different devices.
 
-Currently, two official plugins are available:
+<!-- 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🏠 [Homepage](https://whflima.github.io/contacts-react-app/)
 
-## Expanding the ESLint configuration
+## Video demo
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Watch the video below for a quick demo of how the application works:
 
-- Configure the top-level `parserOptions` property like this:
+> **Note:** The video may take some time to load. Please be patient.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+![video-contacts-app](https://github.com/user-attachments/assets/f6da516a-5f50-4e6c-b815-aa0d6ee982fa)
+
+-->
+
+## Prerequisites
+- Node.js (v14.0 or higher)
+- npm (v10.4.0 or higher)
+
+## Clone
+
+Run the following command to clone this project to your local machine:
+
+```sh
+git clone https://github.com/whflima/recomenda-me-app.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Navigate to the project folder:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Run the following command to move into the project folder:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```sh
+cd recomenda-me-app
 ```
+
+## Install
+
+Run the following command to install the required dependencies:
+
+```sh
+npm install
+```
+
+It will install all the necessary packages listed in the package.json file.
+
+## Start
+
+Run the following command to start the development server:
+
+```sh
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:5173) to view it in the browser.
+
+## Author
+
+👤 **Welisson Lima**
+
+* Github: [@whflima](https://github.com/whflima)
+* LinkedIn: [@https:\/\/www.linkedin.com\/in\/welisson-lima\/](https://linkedin.com/in/welisson-lima)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+***
