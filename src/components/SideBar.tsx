@@ -56,7 +56,7 @@ export function SideBar({ isSidebarVisible }: ISideBarProps) {
                 />
               }
             >
-              <Dropdown.Item onClick={() => handleClickLanguageChange('us')}>
+              <Dropdown.Item onClick={() => handleClickLanguageChange('en')}>
                 <FlagIcon
                   className="h-3.5 w-3.5 rounded-full mr-2"
                   country="English (US)"
