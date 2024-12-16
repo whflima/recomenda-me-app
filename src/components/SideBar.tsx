@@ -3,8 +3,15 @@
 import { Dropdown, Sidebar, SidebarItems } from 'flowbite-react';
 import { HiChartPie } from 'react-icons/hi';
 import FlagIcon from './FlagIcon';
+import { useTranslation } from 'react-i18next';
 
 export function SideBar({ isSidebarVisible }: ISideBarProps) {
+  const { t, i18n } = useTranslation();
+
+  const handleClickLanguageChange = (language: string) => {
+    i18n.changeLanguage(language);
+  };
+
   const divDropdownClass =
     window.innerWidth < 1024
       ? 'absolute bottom-0 left-0 justify-center w-full flex '
@@ -29,10 +36,10 @@ export function SideBar({ isSidebarVisible }: ISideBarProps) {
         <SidebarItems className="pb-2 space-y-2">
           <Sidebar.ItemGroup>
             <Sidebar.Item href="/" icon={HiChartPie}>
-              Dashboard
+              {t('side-bar-item-dashboard')}
             </Sidebar.Item>
             <Sidebar.Item href="/profile" icon={HiChartPie}>
-              Profile
+              {t('side-bar-item-profile')}
             </Sidebar.Item>
           </Sidebar.ItemGroup>
         </SidebarItems>
@@ -45,25 +52,25 @@ export function SideBar({ isSidebarVisible }: ISideBarProps) {
                 <FlagIcon
                   className="h-5 w-5 rounded-full mt-0.5"
                   country=""
-                  flagIcon="flag-icon-us.svg"
+                  flagIcon={t('side-bar-dropdown-icon')}
                 />
               }
             >
-              <Dropdown.Item>
+              <Dropdown.Item onClick={() => handleClickLanguageChange('us')}>
                 <FlagIcon
                   className="h-3.5 w-3.5 rounded-full mr-2"
                   country="English (US)"
                   flagIcon="flag-icon-us.svg"
                 />
               </Dropdown.Item>
-              <Dropdown.Item>
+              <Dropdown.Item onClick={() => handleClickLanguageChange('pt')}>
                 <FlagIcon
                   className="h-3.5 w-3.5 rounded-full mr-2"
                   country="Português"
                   flagIcon="flag-icon-br.svg"
                 />
               </Dropdown.Item>
-              <Dropdown.Item>
+              <Dropdown.Item onClick={() => handleClickLanguageChange('es')}>
                 <FlagIcon
                   className="h-3.5 w-3.5 rounded-full mr-2"
                   country="Español"
