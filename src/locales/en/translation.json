@@ -1,5 +1,7 @@
 {
   "side-bar-item-dashboard": "Dashboard",
   "side-bar-item-profile": "Profile",
-  "side-bar-dropdown-icon": "flag-icon-us.svg"
+  "side-bar-dropdown-icon": "flag-icon-us.svg",
+  "side-bar-item-messages": "Messages"
+
 }

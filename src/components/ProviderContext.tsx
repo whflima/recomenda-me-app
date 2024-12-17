@@ -6,8 +6,7 @@ export const ProviderContext = createContext<IProviderContext>(
   {} as IProviderContext
 );
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-const Provider = (props: React.PropsWithChildren<{}>) => {
+const Provider = (props: React.PropsWithChildren) => {
   const [theme, setTheme] = useState(
     localStorage.getItem(LocalStorageItems.THEME) || Modes.SYSTEM
   );

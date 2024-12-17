@@ -1,7 +1,7 @@
 'use client';
 
 import { Dropdown, Sidebar, SidebarItems } from 'flowbite-react';
-import { HiChartPie } from 'react-icons/hi';
+import { HiChartPie, HiInboxIn, HiUser } from 'react-icons/hi';
 import FlagIcon from './FlagIcon';
 import { useTranslation } from 'react-i18next';
 
@@ -38,13 +38,16 @@ export function SideBar({ isSidebarVisible }: ISideBarProps) {
             <Sidebar.Item href="/" icon={HiChartPie}>
               {t('side-bar-item-dashboard')}
             </Sidebar.Item>
-            <Sidebar.Item href="/profile" icon={HiChartPie}>
+            <Sidebar.Item href="./profile" icon={HiUser}>
               {t('side-bar-item-profile')}
+            </Sidebar.Item>
+            <Sidebar.Item href="./messages" icon={HiInboxIn}>
+              {t('side-bar-item-messages')}
             </Sidebar.Item>
           </Sidebar.ItemGroup>
         </SidebarItems>
         <div className={divDropdownClass}>
-          <div className="p-4 space-x-4 bg-white dark:bg-gray-800">
+          <div className="p-4 space-x-4 dark:bg-gray-800">
             <Dropdown
               arrowIcon={false}
               inline

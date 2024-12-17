@@ -68,7 +68,7 @@ export default function NavBar({
             <span className="sr-only">Toggle sidebar</span>
           </button>
           <img
-            src="/react.svg"
+            src="react.svg"
             className="h-8 mr-3"
             alt="Flowbite React Logo"
           />

@@ -3,8 +3,9 @@
 import { useEffect, useState } from 'react';
 import NavBar from './NavBar';
 import { SideBar } from './SideBar';
+import { Outlet } from 'react-router-dom';
 
-export function Layout(props: React.PropsWithChildren) {
+export function Layout() {
   const [isSidebarVisible, setSidebarVisible] = useState(true);
 
   useEffect(() => {
@@ -30,7 +31,9 @@ export function Layout(props: React.PropsWithChildren) {
           id="main-content"
           className="relative w-full h-full overflow-y-auto bg-gray-50 lg:ml-64 dark:bg-gray-900"
         >
-          <main className="px-4 pt-6">{props.children}</main>
+          <main className="px-4 pt-6">
+            <Outlet />
+          </main>
         </div>
       </div>
     </>
