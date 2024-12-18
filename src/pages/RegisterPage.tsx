@@ -1,7 +1,7 @@
 export default function RegisterPage() {
   return (
     <>
-      <h1>RegisterPage</h1>
+      <h1 className="whitespace-nowrap dark:text-white">RegisterPage</h1>
     </>
   );
 }

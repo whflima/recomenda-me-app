@@ -1,9 +1,11 @@
 'use client';
 
 import { Dropdown, Sidebar, SidebarItems } from 'flowbite-react';
-import { HiChartPie, HiInboxIn, HiUser } from 'react-icons/hi';
+import { HiChartPie, HiInboxIn } from 'react-icons/hi';
 import FlagIcon from './FlagIcon';
 import { useTranslation } from 'react-i18next';
+import { BiSolidCameraMovie } from 'react-icons/bi';
+import { TbSettingsFilled } from 'react-icons/tb';
 
 export function SideBar({ isSidebarVisible }: ISideBarProps) {
   const { t, i18n } = useTranslation();
@@ -38,11 +40,14 @@ export function SideBar({ isSidebarVisible }: ISideBarProps) {
             <Sidebar.Item href="/" icon={HiChartPie}>
               {t('side-bar-item-dashboard')}
             </Sidebar.Item>
-            <Sidebar.Item href="./profile" icon={HiUser}>
-              {t('side-bar-item-profile')}
+            <Sidebar.Item href="./my-movies" icon={BiSolidCameraMovie}>
+              {t('side-bar-item-movies')}
             </Sidebar.Item>
             <Sidebar.Item href="./messages" icon={HiInboxIn}>
               {t('side-bar-item-messages')}
+            </Sidebar.Item>
+            <Sidebar.Item href="./settings" icon={TbSettingsFilled}>
+              {t('side-bar-item-settings')}
             </Sidebar.Item>
           </Sidebar.ItemGroup>
         </SidebarItems>

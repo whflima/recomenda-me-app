@@ -2,6 +2,8 @@
   "side-bar-item-dashboard": "Dashboard",
   "side-bar-item-profile": "Profile",
   "side-bar-dropdown-icon": "flag-icon-us.svg",
-  "side-bar-item-messages": "Messages"
-
+  "side-bar-item-messages": "Messages",
+  "side-bar-item-movies": "My movies",
+  "side-bar-item-settings": "Settings",
+  "settings-user": "User settings"
 }
