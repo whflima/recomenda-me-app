@@ -92,6 +92,84 @@ export default function SettingsPage() {
               </div>
             </form>
           </div>
+
+          {/* Alguma outra coisa */}
+          <div className="p-4 mb-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+            <h3 className="mb-4 text-xl font-semibold dark:text-white">
+              Alguma outra coisa
+            </h3>
+            <form action="">
+              <div className="mb-4">
+                <label
+                  htmlFor="settings-language"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  {t('settings-select-language')}
+                </label>
+                <select
+                  id="settings-language"
+                  className="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                >
+                  <option>English (US)</option>
+                  <option>Español</option>
+                  <option>Português</option>
+                </select>
+              </div>
+              <div className="mb-4">
+                <label
+                  htmlFor="settings-time-zone"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  {t('settings-select-time-zone')}
+                </label>
+                <select
+                  id="settings-time-zone"
+                  className="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                >
+                  <option>GMT-5 New York Time (EST)</option>
+                  <option>GMT+1 Madrid Time (CET)</option>
+                  <option>GMT-3 Brasília Time (BRT)</option>
+                </select>
+              </div>
+              <div className="mb-4">
+                <label
+                  htmlFor="settings-time-zone"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  {t('settings-select-time-zone')}
+                </label>
+                <select
+                  id="settings-time-zone"
+                  className="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                >
+                  <option>GMT-5 New York Time (EST)</option>
+                  <option>GMT+1 Madrid Time (CET)</option>
+                  <option>GMT-3 Brasília Time (BRT)</option>
+                </select>
+              </div>
+              <div className="mb-4">
+                <label
+                  htmlFor="settings-time-zone"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  {t('settings-select-time-zone')}
+                </label>
+                <select
+                  id="settings-time-zone"
+                  className="bg-gray-50 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                >
+                  <option>GMT-5 New York Time (EST)</option>
+                  <option>GMT+1 Madrid Time (CET)</option>
+                  <option>GMT-3 Brasília Time (BRT)</option>
+                </select>
+              </div>
+              <div>
+                <button className="inline-flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                  {t('common-save')}
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
 
         <div className="col-span-2">

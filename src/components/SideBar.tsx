@@ -43,9 +43,11 @@ export function SideBar({ isSidebarVisible }: ISideBarProps) {
             <Sidebar.Item href="./my-movies" icon={BiSolidCameraMovie}>
               {t('side-bar-item-movies')}
             </Sidebar.Item>
-            <Sidebar.Item href="./messages" icon={HiInboxIn}>
-              {t('side-bar-item-messages')}
-            </Sidebar.Item>
+            {/**
+              <Sidebar.Item href="./messages" icon={HiInboxIn}>
+                {t('side-bar-item-messages')}
+              </Sidebar.Item>
+            */}
             <Sidebar.Item href="./settings" icon={TbSettingsFilled}>
               {t('side-bar-item-settings')}
             </Sidebar.Item>
