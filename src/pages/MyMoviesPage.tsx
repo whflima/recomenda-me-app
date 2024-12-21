@@ -26,7 +26,7 @@ export default function MyMoviesPage() {
                 className="inline-flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
               >
                 <FaPlus className="w-3 h-3 mr-2 -ml-1" />
-                Add movie
+                {t('my-movies-add-movie')}
               </button>
             </div>
           </div>
@@ -34,19 +34,19 @@ export default function MyMoviesPage() {
         <Table striped>
           <TableHead>
             <Table.HeadCell className="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">
-              Title
+              {t('my-movies-table-title')}
             </Table.HeadCell>
             <Table.HeadCell className="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400 hidden md:block">
-              Year
+              {t('my-movies-table-year')}
             </Table.HeadCell>
             <Table.HeadCell className="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">
-              Score
+              {t('my-movies-table-score')}
             </Table.HeadCell>
             <Table.HeadCell className="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400 hidden lg:block">
-              Popularity
+              {t('my-movies-table-popularity')}
             </Table.HeadCell>
             <Table.HeadCell className="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">
-              <span className="sr-only">Actions</span>
+              <span className="sr-only">{t('common-actions')}</span>
             </Table.HeadCell>
           </TableHead>
           <TableBody>
@@ -57,10 +57,10 @@ export default function MyMoviesPage() {
               <Table.Cell className="hidden md:block">102</Table.Cell>
               <Table.Cell className="p-4 space-x-2 whitespace-nowrap">
                 <a className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
-                  Edit
+                  {t('common-edit')}
                 </a>
                 <a className="font-medium text-red-600 dark:text-red-500 hover:underline">
-                  Remove
+                  {t('common-delete')}
                 </a>
               </Table.Cell>
             </Table.Row>
@@ -74,10 +74,10 @@ export default function MyMoviesPage() {
                   onClick={() => setOpenModal(true)}
                   className="font-medium text-cyan-600 hover:underline dark:text-cyan-500"
                 >
-                  Edit
+                  {t('common-edit')}
                 </a>
                 <a className="font-medium text-red-600 dark:text-red-500 hover:underline">
-                  Remove
+                  {t('common-delete')}
                 </a>
               </Table.Cell>
             </Table.Row>
@@ -86,7 +86,7 @@ export default function MyMoviesPage() {
       </div>
 
       <Modal show={openModal} onClose={() => setOpenModal(false)}>
-        <Modal.Header>Add new movie</Modal.Header>
+        <Modal.Header>{t('modal-my-movies-title')}</Modal.Header>
         <Modal.Body>
           <form action="">
             <div className="grid grid-cols-6 gap-6">
@@ -95,7 +95,7 @@ export default function MyMoviesPage() {
                   htmlFor="movie-title"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  Title
+                  {t('my-movies-table-title')}
                 </label>
                 <input
                   type="text"
@@ -111,7 +111,7 @@ export default function MyMoviesPage() {
                   htmlFor="movie-year"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  Year
+                  {t('my-movies-table-year')}
                 </label>
                 <input
                   type="text"
@@ -127,7 +127,7 @@ export default function MyMoviesPage() {
                   htmlFor="movie-score"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  {t('settings-general-information-birthday')}
+                  {t('my-movies-table-score')}
                 </label>
                 <input
                   type="text"
@@ -143,7 +143,7 @@ export default function MyMoviesPage() {
                   htmlFor="movie-popularity"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  Popularity
+                  {t('my-movies-table-popularity')}
                 </label>
                 <input
                   type="text"
